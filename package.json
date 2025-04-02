@@ -1,13 +1,14 @@
 {
   "name": "tradr-game",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "next build"
+    "vercel-build": "npm install && next build",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
@@ -37,6 +38,7 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=18.x",
+    "npm": ">=9.0.0"
   }
 }

@@ -1,9 +1,14 @@
 {
+  "name": "tradr-game",
   "version": 2,
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/next"
+      "use": "@vercel/next",
+      "config": {
+        "buildCommand": "npm run build",
+        "outputDirectory": ".next"
+      }
     }
   ],
   "routes": [
@@ -14,6 +19,12 @@
   ],
   "github": {
     "enabled": true,
-    "silent": false
+    "silent": false,
+    "autoJobCancelation": true
+  },
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
   }
 } 
